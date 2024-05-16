@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: episode3-backend-service
+  labels:
+    app: episode3-backend
+spec:
+  selector:
+    app: episode3-backend
+  ports:
+    - protocol: TCP
+      port: 3002
+      targetPort: 3002
+  type: ClusterIP
+

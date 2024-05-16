@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: episode2-frontend
+  labels:
+    app: episode2-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: episode2-frontend
+  template:
+    metadata:
+      labels:
+        app: episode2-frontend
+    spec:
+      containers:
+      - name: frontend
+        image: aghaali1/episode2-frontend-image:latest
+        ports:
+        - containerPort: 81
